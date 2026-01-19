@@ -79,4 +79,12 @@
     "tw-animate-css": "1.3.3",
     "typescript": "^5"
   }
+  "scripts": {
+  "dev": "next dev",                // ローカル開発用（そのままでOK）
+  "build": "open-next build",       // ★ ここを next build から変更
+  "deploy": "open-next deploy",     // ★ 追加（あとで wrangler と紐付け）
+  "lint": "eslint .",
+  "start": "next start"             // これはローカル用。Workers本番では使わない
+}
+
 }
