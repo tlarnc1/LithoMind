@@ -2,13 +2,18 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "lithomind",
-  "main": ".open-next/worker.js", // ★ ここが超重要
+  "main": ".open-next/worker.js",          // ★ OpenNextが出すworkerを指定
   "compatibility_date": "2026-01-19",
   "compatibility_flags": ["nodejs_compat"],
+
+  // Pagesは使わないので pages_build_output_dir は削除
+  // "pages_build_output_dir": ".vercel/output/static",
+
   "observability": {
     "enabled": true,
     "head_sampling_rate": 1
   },
+
   "vars": {
     "PROJECT_NAME": "LithoMind",
     "MISSION": "One second to analyze, a lifetime to save."
