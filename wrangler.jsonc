@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lithomind",
+  "compatibility_date": "2026-01-19", // 今日の日付：最新のランタイムを適用
+  "compatibility_flags": [
+    "nodejs_compat" // Next.jsの動作に必須
+  ],
+  "pages_build_output_dir": ".vercel/output/static", // v0/Next.jsの出力先
+  
+  // 地震データのリアルタイム解析を見据えた設定
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+
+  // 将来的に地震データを保存するデータベース（D1）などを使う場合にここに追記します
+  "d1_databases": [],
+
+  "vars": {
+    "PROJECT_NAME": "LithoMind",
+    "MISSION": "One second to analyze, a lifetime to save."
+  }
+}
