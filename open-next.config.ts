@@ -1,4 +1,8 @@
 // open-next.config.ts
-import { defineCloudflareConfig } from '@opennextjs/cloudflare';
+import type { CloudflareAdapterConfig } from "@opennextjs/cloudflare";
 
-export default defineCloudflareConfig({});
+const config: CloudflareAdapterConfig = {
+  // とりあえずデフォルトでOK。必要になったらここを増やす。
+};
+
+export default config;
