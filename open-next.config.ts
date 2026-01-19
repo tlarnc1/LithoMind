@@ -1,10 +1,7 @@
 // open-next.config.ts
-import type { UserOpenNextConfig } from '@opennextjs/cloudflare';
+import { defineCloudflareConfig } from '@opennextjs/cloudflare';
 
-const config: UserOpenNextConfig = {
-  adapter: '@opennextjs/cloudflare',
+export default defineCloudflareConfig({
   appDirectory: true,
-  // edgeRuntime: false, // ← コメントなので無視される
-};
+});
 
-export default config;
